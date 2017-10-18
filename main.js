@@ -8,7 +8,10 @@ let win;
 const createWindow = () => {
   win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    transparent: true,
+    autoHideMenuBar: true,
+    frame: false
   });
 
   const URL = url.format({
@@ -18,6 +21,7 @@ const createWindow = () => {
   });
 
   win.loadURL(URL);
+  win.openDevTools();
 
   win.on('close', () => {
     win = null;

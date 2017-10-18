@@ -5,8 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    div {
+      width: 200px; height: 200px;
+      border: 1px solid #ddd;
+    }
+  </style>
 </head>
-<body>
+<body style="-webkit-app-region: drag">
   <h1>hello world</h1>
+  <button id="clickMe">click me</button>
+
+  <div style="-webkit-app-region: no-drag">可拖拽区域</div>
+  <div style="-webkit-app-region: no-drag">不可拖拽区域</div>
+
+  <script>
+    require('./renderer-process/open.js');
+  </script>
 </body>
 </html>
